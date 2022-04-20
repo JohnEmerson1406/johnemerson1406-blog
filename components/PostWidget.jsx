@@ -5,7 +5,11 @@ import Link from 'next/link'
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([])
     if(slug) {
-      
+      getSimilarPosts(category, slug)
+        .then((result) => setRelatedPosts(result))
+      } else {
+      getRecentPosts()
+        .then((result) => setRelatedPosts(result))
     }
   useEffect(() => {
 
