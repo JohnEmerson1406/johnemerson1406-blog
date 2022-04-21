@@ -7,7 +7,7 @@ import { getRecentPosts, getSimilarPosts } from '../services'
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([])
     if(slug) {
-      getSimilarPosts(category, slug)
+      getSimilarPosts(categories, slug)
         .then((result) => setRelatedPosts(result))
       } else {
       getRecentPosts()
@@ -15,7 +15,7 @@ const PostWidget = ({ categories, slug }) => {
     }
   useEffect(() => {
 
-  }, [])
+  }, [slug])
 
   return (
     <div>PostWidget</div>
