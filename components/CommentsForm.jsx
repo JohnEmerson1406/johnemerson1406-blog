@@ -11,7 +11,7 @@ const CommentsForm = ({ slug }) => {
 
   return (
     <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8'>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'></h3>
+      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Reply</h3>
       <div className='grid grid-cols-1 gap-4 mb-4'>
         <textarea
           ref={commentEl}
@@ -20,13 +20,20 @@ const CommentsForm = ({ slug }) => {
           name='comment'
         />
       </div>
-      <div className='grid grid-cols-1 gap-4 mb-4'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
         <input
           type='text'
           ref={nameEl}
           className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
           placeholder='Name'
           name='name'
+        />
+        <input
+          type='text'
+          ref={emailEl}
+          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+          placeholder='Email'
+          name='email'
         />
       </div>
       <div className='grid grid-cols-1 gap-4 mb-4'>
