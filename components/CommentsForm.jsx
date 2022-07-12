@@ -21,7 +21,13 @@ const CommentsForm = ({ slug }) => {
         />
       </div>
       <div className='grid grid-cols-1 gap-4 mb-4'>
-
+        <input
+          type='text'
+          ref={nameEl}
+          className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
+          placeholder='Name'
+          name='name'
+        />
       </div>
       <div className='grid grid-cols-1 gap-4 mb-4'>
 
