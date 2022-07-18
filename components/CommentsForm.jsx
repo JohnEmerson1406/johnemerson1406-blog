@@ -15,6 +15,7 @@ const CommentsForm = ({ slug }) => {
     const { value: comment } = commentEl.current
     const { value: name } = nameEl.current
     const { value: email } = emailEl.current
+    const { checked: storeData } = storeDataEl.current
 
     // if(!commentEl.current.value || !nameEl.current.value || !emailEl.current.value)
     if(!comment || !name || !email) {
@@ -23,6 +24,14 @@ const CommentsForm = ({ slug }) => {
     }
 
     const commentObj = { name, email, comment, slug }
+
+    if(storeData) {
+      localStorage.setItem('name', name)
+      localStorage.setItem('email', email)
+    } else {
+      localStorage.removeItem('name', name)
+      localStorage.removeItem('email', email)
+    }
   }
 
   return (
