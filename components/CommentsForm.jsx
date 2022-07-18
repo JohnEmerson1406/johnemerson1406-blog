@@ -21,6 +21,8 @@ const CommentsForm = ({ slug }) => {
       setError(true)
       return
     }
+
+    const commentObj = { name, email, comment, slug }
   }
 
   return (
@@ -49,6 +51,11 @@ const CommentsForm = ({ slug }) => {
           placeholder='Email'
           name='email'
         />
+      </div>
+      <div className='grid grid-cols-1 gap-4 mb-4'>
+        <div>
+          <input ref={storeDataEl} type='checkbox' id='storeData' name='storeData' value='true' />
+        </div>
       </div>
       {error && <p className='text-xs text-red-500'>All fields are required.</p>}
       <div className='mt-8'>
