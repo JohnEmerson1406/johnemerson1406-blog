@@ -10,7 +10,17 @@ const CommentsForm = ({ slug }) => {
   const storeDataEl = useRef()
 
   const handleCommentSubmission = () => {
+    setError(false)
 
+    const { value: comment } = commentEl.current
+    const { value: name } = nameEl.current
+    const { value: email } = emailEl.current
+
+    // if(!commentEl.current.value || !nameEl.current.value || !emailEl.current.value)
+    if(!comment || !name || !email) {
+      setError(true)
+      return
+    }
   }
 
   return (
