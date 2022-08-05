@@ -32,7 +32,8 @@
 
 ## 💡 About the project
 
-ToDo
+This is a free personal blog.
+- [Deploy](https://johnggli-blog.vercel.app)
 
 ## 🚀 Getting started
 
