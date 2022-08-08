@@ -42,7 +42,7 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 ```bash
 git clone https://github.com/johnggli/johnggli-blog
 ```
-- Once the files are on your machine, open the _linktree_ folder in [Visual Studio Code](https://code.visualstudio.com/).
+- Once the files are on your machine, open the _johnggli-blog_ folder in [Visual Studio Code](https://code.visualstudio.com/).
 - Create the `.env` file with `NEXT_PUBLIC_GRAPHCMS_ENDPOINT` and `GRAPHCMS_TOKEN`
 - Run `yarn install`
 - Run `yarn run dev`
