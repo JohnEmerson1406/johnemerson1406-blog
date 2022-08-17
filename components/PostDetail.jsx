@@ -1,10 +1,7 @@
 import React from 'react'
 import moment from 'moment'
-import 'moment/locale/pt-br'
 
 const PostDetail = ({ post }) => {
-  moment.locale('pt-br')
-
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text
 
