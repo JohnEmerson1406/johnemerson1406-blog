@@ -32,7 +32,7 @@
 
 ## 💡 About the project
 
-This is a free personal blog.
+This is a free responsive CMS Blog App, with featured and recent posts, categories, markdown articles, author information, comments, and more.
 - [Deploy](https://johnggli-blog.vercel.app)
 
 ## 🚀 Getting started
