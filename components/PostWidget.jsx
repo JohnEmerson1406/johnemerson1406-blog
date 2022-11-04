@@ -27,13 +27,11 @@ const PostWidget = ({ categories, slug }) => {
           <div className='w-16 flex-none'>
             <img
               alt={post.title}
-              height='60px'
-              width='60px'
-              className='align-middle rounded-full'
+              className='align-middle rounded-full object-cover h-14 w-14'
               src={post.featuredImage.url}
             />
           </div>
-          <div className='flex-grow ml-4'>
+          <div className='flex-grow ml-2'>
             <p className='text-gray-500 font-xs'>
               {moment(post.createdAt).format('DD MMM. YYYY')}
             </p>
