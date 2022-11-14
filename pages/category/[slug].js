@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import { getCategories, getCategoryPost } from '../../services'
+import { getCategories, getCategoryDetails, getCategoryPost } from '../../services'
 import { PostCard, Categories, Loader } from '../../components'
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts, category }) => {
   const router = useRouter()
 
   if (router.isFallback) {
     return <Loader />
   }
+
+  useEffect(() => {
+    document.title = `${category.name} - Johnggli Blog`
+  }, [category])
 
   return (
     <div className='container mx-auto px-10 mb-8'>
@@ -33,9 +37,10 @@ export default CategoryPost
 // Fetch data at build time
 export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug)
+  const category = await getCategoryDetails(params.slug)
 
   return {
-    props: { posts },
+    props: { posts, category },
   }
 }
 
