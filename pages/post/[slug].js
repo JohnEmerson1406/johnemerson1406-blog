@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 import { getPosts, getPostDetails } from '../../services'
@@ -10,6 +10,10 @@ const PostDetails = ({ post }) => {
   if(router.isFallback) {
     return <Loader />
   }
+
+  useEffect(() => {
+    document.title = `${post.title} - Johnggli Blog`
+  }, [post])
 
   return (
     <div className='container mx-auto px-10 mb-8'>
