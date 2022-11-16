@@ -7,13 +7,13 @@ import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loa
 const PostDetails = ({ post }) => {
   const router = useRouter()
 
-  if(router.isFallback) {
-    return <Loader />
-  }
-
   useEffect(() => {
     document.title = `${post.title} - Johnggli Blog`
   }, [post])
+
+  if(router.isFallback) {
+    return <Loader />
+  }
 
   return (
     <div className='container mx-auto px-10 mb-8'>

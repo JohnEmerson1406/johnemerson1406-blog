@@ -7,13 +7,13 @@ import { PostCard, Categories, Loader } from '../../components'
 const CategoryPost = ({ posts, category }) => {
   const router = useRouter()
 
-  if (router.isFallback) {
-    return <Loader />
-  }
-
   useEffect(() => {
     document.title = `${category.name} - Johnggli Blog`
   }, [category])
+
+  if (router.isFallback) {
+    return <Loader />
+  }
 
   return (
     <div className='container mx-auto px-10 mb-8'>
