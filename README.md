@@ -25,7 +25,7 @@
 ---
 
 <p align="center">
-  <img alt="screenshot" src="screenshot.png">
+  <img alt="screenshot" src="https://user-images.githubusercontent.com/43749971/202792384-465ee790-b9cd-4cec-8d3b-d08a45d74314.png">
 </p>
 
 ---
